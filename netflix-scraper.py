@@ -51,7 +51,7 @@ with webdriver.Chrome(service=Service(executable_path="chromedriver.exe"),option
             logging.info("Video is playing")
         logging.info("Getting Description")
         desc=driver.find_element(by=By.CLASS_NAME,value="preview-modal-synopsis").get_attribute("innerText")
-        logging.info("Description - "+str(desc))
+        logging.info(f"Description - {str(desc)}")
         logging.info("Getting Cast")
         cast=driver.find_element(by=By.CLASS_NAME,value="previewModal--detailsMetadata")\
             .find_element(by=By.CLASS_NAME,value="previewModal--detailsMetadata-right")\
